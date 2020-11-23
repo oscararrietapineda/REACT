@@ -1,16 +1,19 @@
 import React from 'react';
 import './Evaluaciones.css';
+import Header from '../Header/Header';
 import Preguntas from '../Preguntas/Preguntas';
 import Respuestas from '../Respuestas/Respuestas';
 function Evaluaciones(props) {
     return (
+      
       <div>
+        <Header />
         <div className="Contenido">
          <h1> Evaluaci&oacute;n: {props.codigo} <br>
          </br> 
          <h4> Tema {props.descripcion} -Fecha Limite {props.fechaLimite}</h4></h1> 
         </div> 
-
+     
         <Preguntas contenido="De acuerdo con el concepto de Llaves Primarias indique cual es  la respuesta correcta" 
         Valor="5" Id="1"/>
 
