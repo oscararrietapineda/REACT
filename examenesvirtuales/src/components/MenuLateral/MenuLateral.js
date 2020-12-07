@@ -1,7 +1,39 @@
 import React from 'react';
-import './MenuLateral.css';
+import './MenuLateral.css'; 
+import Elemento from './Elemento';
+/**
+ * MenuLateral
+ * Props: 
+ * Terminados:Cantidad de evaluaciones que el usuario ha completado
+ * Pendientes:Cantidad de evaluaciones que el usuario tiene pendientes
+ * State:
+ * CantidadEvaluaciones: Guarda los valores de las evaluaciones en caso que en el props no venga la evaluacion esta sera 0
+ * Terminados: Se iguala al props de terminados
+ * Pendientes:Cantidad de evaluaciones que el usuario tiene pendientes
+ * 
+ * Renderizado: Cuando la cantidad sea 0 , el elemento no sera renderizado
+ */
+class MenuLateral extends React.Component {
+  constructor(props) {
+    super(props); // Invoca al constructor base
+    this.state = {CantidadEvaluaciones: {Pendientes:0,Terminadas:0}};
+  }
 
-function MenuLateral(props) {
+  
+  componentDidMount() { 
+    let Pendientes = typeof this.props.Pendientes === "undefined" ? 0 : this.props.Pendientes;
+    let Terminadas = typeof this.props.Terminadas === "undefined" ? 0 : this.props.Terminadas;
+    this.setState({
+      CantidadEvaluaciones:  {Pendientes:Pendientes,Terminadas:Terminadas}
+    });
+ 
+  }
+
+  componentWillUnmount() {
+ 
+  }
+
+  render() {
     return (
       <div> 
           <section id="main">
@@ -10,11 +42,14 @@ function MenuLateral(props) {
               <div class="col-md-3">
               <div class="list-group">
               <a href="index.html" class="list-group-item active main-color-bg">
-                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Dashboard
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Status
               </a>
-              <a href="pages.html" class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Pages <span class="badge">31</span></a>
-              <a href="posts.html" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Posts <span class="badge">41</span></a>
-              <a href="users.html" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Users <span class="badge">59</span></a>
+              {this.state.CantidadEvaluaciones.Pendientes === 0 ? null :
+                <Elemento  Titulo={'Pendientes'}  Cantidad={this.state.CantidadEvaluaciones.Pendientes} />
+              }
+              {this.state.CantidadEvaluaciones.Terminadas === 0 ? null :
+                 <Elemento  Titulo={'Terminados'}  Cantidad={this.state.CantidadEvaluaciones.Terminadas} />
+              }
             </div>
             </div>
             </div>
@@ -23,5 +58,7 @@ function MenuLateral(props) {
       </div>
     );
   }
-  
+}
+     
+ 
 export default MenuLateral;

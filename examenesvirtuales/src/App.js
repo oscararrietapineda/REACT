@@ -10,7 +10,8 @@ function App() {
   return (
     <div>
        <Header />  
-      <MenuLateral /> 
+      
+      <MenuLateral Pendientes= {2} /> 
     </div>
   );
 }
