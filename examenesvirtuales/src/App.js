@@ -9,9 +9,8 @@ import Header from './components/Header/Header';
 function App() {
   return (
     <div>
-       <Header />  
-      
-      <MenuLateral Pendientes= {2} /> 
+       <Header />   
+      <MenuLateral Pendientes= {2} ElementosAdicionales={[{id:1,Titulo: 'Ciencias',Cantidad:0},{id:2,Titulo: 'Bases de Datos',Cantidad:10}]} /> 
     </div>
   );
 }

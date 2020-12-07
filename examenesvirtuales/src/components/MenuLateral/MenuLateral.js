@@ -34,6 +34,7 @@ class MenuLateral extends React.Component {
   }
 
   render() {
+    let  ElementosAdicionales = this.props.ElementosAdicionales
     return (
       <div> 
           <section id="main">
@@ -43,13 +44,15 @@ class MenuLateral extends React.Component {
               <div class="list-group">
               <a href="index.html" class="list-group-item active main-color-bg">
                 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Status
-              </a>
-              {this.state.CantidadEvaluaciones.Pendientes === 0 ? null :
-                <Elemento  Titulo={'Pendientes'}  Cantidad={this.state.CantidadEvaluaciones.Pendientes} />
-              }
-              {this.state.CantidadEvaluaciones.Terminadas === 0 ? null :
-                 <Elemento  Titulo={'Terminados'}  Cantidad={this.state.CantidadEvaluaciones.Terminadas} />
-              }
+              </a> 
+               <Elemento  Titulo={'Pendientes'}  Cantidad={this.state.CantidadEvaluaciones.Pendientes} /> 
+               <Elemento  Titulo={'Terminados'}  Cantidad={this.state.CantidadEvaluaciones.Terminadas} /> 
+            
+              {
+              ElementosAdicionales.map((ElementosAdicionales) =>     
+              <Elemento key={ElementosAdicionales.id.toString()}
+               Titulo= {ElementosAdicionales.Titulo} Cantidad= {ElementosAdicionales.Cantidad} />)
+               }
             </div>
             </div>
             </div>
