@@ -37,10 +37,8 @@ class MenuLateral extends React.Component {
     let  ElementosAdicionales = this.props.ElementosAdicionales
     return (
       <div> 
-          <section id="main">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-3">
+        
+              <div class="col-md-12">
               <div class="list-group">
               <a href="index.html" class="list-group-item active main-color-bg">
                 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Status
@@ -55,9 +53,7 @@ class MenuLateral extends React.Component {
                }
             </div>
             </div>
-            </div>
-            </div>
-            </section> 
+             
       </div>
     );
   }

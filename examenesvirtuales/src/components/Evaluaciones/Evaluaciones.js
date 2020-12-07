@@ -7,9 +7,9 @@ function Evaluaciones(props) {
     return (
       
       <div>
-
-        <div className="Contenido">
-         <h1> Evaluaci&oacute;n: {props.codigo}</h1> 
+     <div className="jumbotron">
+     
+        <div className="Contenido"> 
          <h4> Tema {props.descripcion} -Fecha Limite {props.fechaLimite}</h4>
         </div> 
        <Temporizador dateinicio= {new Date()} />
@@ -32,6 +32,7 @@ function Evaluaciones(props) {
         <Respuestas valor = '0' Respuesta = "nVarchar" idPregunta= "3" /> 
         <Respuestas valor = '0' Respuesta = "Date" idPregunta= "3" /> 
         <Respuestas valor = '5' Respuesta = "Money" idPregunta= "3" /> 
+        </div>
       </div>
     );
   }
