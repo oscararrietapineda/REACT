@@ -1,7 +1,6 @@
 import React from 'react';
-import './Header.css'; 
-
-
+import './Header.css';  
+import UsuarioGet from '../Usuario/UsuarioGet';
 function Header(props) {
     return (
       <div>
@@ -20,7 +19,7 @@ function Header(props) {
             <li><a href="users.html">Users</a></li>
           </ul>
           <ul className="nav navbar-nav navbar-right">
-            <li className="active"><a href="index.html">Welcome, Mr. Arora</a></li>
+            <li className="active"><a href="index.html">Welcome</a></li>
             <li><a href="login.html">Logout</a></li>
           </ul>
         </div> 
@@ -31,7 +30,7 @@ function Header(props) {
     	<div className="row">
     		<div className="col-md-10">
     			<h1><span className="glyphicon glyphicon-cog" aria-hidden="true">
-					</span> Alumno <small>Oscar Arrieta Pineda</small>
+					</span>  <UsuarioGet /> 
 				</h1>
     		</div> 
     	</div> 
