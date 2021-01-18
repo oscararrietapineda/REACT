@@ -12,10 +12,8 @@ class UsuarioGet extends React.Component {
     }
   
     componentDidMount() {
-
-      const consultaId = '1';
-
-      const Ruta = "http://jsonplaceholder.typicode.com/users" + "/" + consultaId;
+ 
+      const Ruta = "http://jsonplaceholder.typicode.com/users/1";
       fetch(Ruta)
         .then(respuesta => respuesta.json())
         .then(
