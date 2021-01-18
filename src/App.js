@@ -3,9 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 /* The following line can be included in your src/index.js or App.js file */
 import './App.css';
 import './css/style.css';  
-import Header from './components/Header/Header';
 import NavBar from './components/NavBar/NavBar';
-import Evaluaciones from './components/Evaluaciones/Evaluaciones';
 function App() {
   return (
     <div>
