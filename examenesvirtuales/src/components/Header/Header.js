@@ -30,7 +30,7 @@ function Header(props) {
     	<div className="row">
     		<div className="col-md-10">
     			<h1><span className="glyphicon glyphicon-cog" aria-hidden="true">
-					</span>  <UsuarioGet /> 
+					</span> 
 				</h1>
     		</div> 
     	</div> 
