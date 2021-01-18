@@ -30,7 +30,7 @@ export default function NavBar() {
 <div className="container">
         <div className="navbar-header">
            
-          <a className="navbar-brand" href="">Sistema de Evaluaciones</a>
+          <p className="navbar-brand" >Sistema de Evaluaciones</p>
         </div>
         </div>
 </div>
